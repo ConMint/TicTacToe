@@ -1,11 +1,13 @@
 body {
     margin: 0;
+    overflow: hidden;
     
 }
 
 .container {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: black;
@@ -17,7 +19,14 @@ body {
     height: 210px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    margin-top: auto;
+    
+    
+}
+
+#resetBtn {
+    margin-bottom: 18%;
+    margin-top: 10px;
 }
 
 .squares {
@@ -29,8 +38,39 @@ body {
     justify-content: center;
 }
 
-.beastydiv {
+.header {
     background-color: white;
-    width: 200px;
+    width: 100vw;
     height: 50px;
+    margin-bottom: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+#player1Name {
+    margin-left: 10%;
+}
+
+#player2Name {
+    margin-right: 10%;
+}
+
+#tictactoe {
+    align-self: center;
+    justify-self: center;
+    font-weight: bold;
+    
+}
+
+.result{
+    width: 100vw;
+    height: 50px;
+    background-color: white;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
 }
