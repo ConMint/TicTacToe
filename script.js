@@ -24,7 +24,7 @@ const playerFactory = function(name,marker) {
 
 };
 
-// GET THE NAMES OF PLAYERS 
+// GET THE NAMES OF PLAYERS
 let assignNames = function  () {
 
     if (typeof player1 === 'undefined' || typeof player2 === 'undefined') {
@@ -32,8 +32,8 @@ let assignNames = function  () {
     player2 = playerFactory(prompt('Who will play as noughts?','Player2'),'O')
     }
 
-    player1Name.innerText = player1.name + ' is playing as X'
-    player2Name.innerText = player2.name + ' is playing as O'
+    player1Name.innerText = 'X - ' + player1.name
+    player2Name.innerText = 'O - ' + player2.name
 };
 
 // CHANGE PLAYER FUNCTIONS ----------------------------------------
@@ -51,10 +51,10 @@ let changeMarkerX = function() {
             winner = 'tie'
         }
         changeMarkerO();
-        
-        
+
+
         }
-        
+
     }
 
 }
@@ -72,9 +72,9 @@ let changeMarkerO = function() {
             winner = 'tie';
         }
         changeMarkerX();
-        
+
         }
-        
+
     }
 
 }
@@ -85,12 +85,12 @@ let gameBoard = function() {
 
     // get names
     assignNames();
-    
-    
 
-    
 
-    
+
+
+
+
     // start the game
     if (typeof winner === 'undefined') {
         changeMarkerX();
@@ -101,7 +101,7 @@ let gameBoard = function() {
     } else {
         changeMarkerX();
     }
-    
+
 };
 
 // FUNCTION THAT CHECKS WINNER EACH TIME, CALLS FUNCTION TO CHECK FOR A DRAW
@@ -119,9 +119,9 @@ let checkWinner = function() {
     } else if (board[2] === board[4] && board[2] === board[6]) {
         return -1
     } else if (board[1] === board[4] && board[1] === board[7]) {
-        return -1    
+        return -1
     } else if (board[3] === board[4] && board[3] === board[5]) {
-        return -1 
+        return -1
     } else if (checkDraw() === 0) {
         return 0
     } else {
@@ -159,10 +159,8 @@ function reset() {
         squares[i].innerText = ''
     }
     gameBoard();
-    
+
 }
 
 // INITIALIZE
 gameBoard();
-
-
