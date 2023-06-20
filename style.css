@@ -12,7 +12,7 @@ html {
 }
 
 .container {
-    height: 100%;
+  min-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,13 +26,13 @@ html {
     height: 210px;
     display: flex;
     flex-wrap: wrap;
-    margin-top: auto;
 
 
 }
 
+
 #resetBtn {
-    margin-bottom: 70px;
+    margin-bottom: auto;
     margin-top: 10px;
 }
 
